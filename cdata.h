@@ -116,3 +116,8 @@ item_list* new_struct_node(char* name, item_list *defs);
 item_list* new_union_node(char* name, item_list *defs);
 
 int print_tree(item_list *tmp);
+
+#include "lexglb.h"
+void *cdataParseAlloc(void *(*mallocProc)(size_t));
+void cdataParseFree (void *p, void (*freeProc)(void*));
+//XXX void cdataParse (void *yyp, int yymajor, cdataParseTOKENTYPE yyminor, cdataParseARG_PDECL);

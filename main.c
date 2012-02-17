@@ -22,7 +22,7 @@ int main(int argc, char** argv)
 	if (cfile != NULL)
 		printf("File opened successfully!\n");
 	printf("---------------------------\n");
-	while ((n = fread(buf, 1, 4096, cfile)) > 0)
+	while ((n = fread(buf, 1, sizeof (buf), cfile)) > 0)
 	{
 		buf[n] = '\0';
 		printf("%s", buf);
